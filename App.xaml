@@ -7,16 +7,20 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary>
-    <Style TargetType="NavigationPage">
-        <Setter Property="BarBackgroundColor" Value="#1E1E26" />
-        <Setter Property="BarTextColor" Value="Cyan" />
-    </Style>
+                    <Style TargetType="NavigationPage">
+                        <Setter Property="BarBackgroundColor"
+                                Value="#1E1E26"/>
+                        <Setter Property="BarTextColor"
+                                Value="Cyan"/>
+                    </Style>
 
-    <Style TargetType="Label">
-        <Setter Property="FontFamily" Value="OpenSansRegular" />
-        <Setter Property="TextColor" Value="White" />
-    </Style>
-</ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="FontFamily"
+                                Value="OpenSansRegular"/>
+                        <Setter Property="TextColor"
+                                Value="White"/>
+                    </Style>
+                </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

@@ -1,19 +1,25 @@
-namespace AppHotel;
+using System;
+using Microsoft.Maui.Controls;
 
-public partial class Sobre : ContentPage
+namespace AppHotel
 {
-    // Construtor que recebe os dados da reserva
-    public Sobre(string suite, string inDate, string outDate, double qnt)
+    public partial class Sobre : ContentPage
     {
-        InitializeComponent();
+        // Construtor atualizado pro o resumo da Agenda 14
+        public Sobre(string suite, string inDate, string outDate, int hospedes, int dias, double total)
+        {
+            InitializeComponent();
 
-        lbl_suite.Text = $"Acomodação: {suite}";
-        lbl_periodo.Text = $"Período: {inDate} até {outDate}";
-        lbl_hospedes.Text = $"Total de Hóspedes: {qnt}";
-    }
+            lbl_suite.Text = suite;
+            lbl_periodo.Text = $"Período: {inDate} até {outDate}";
+            lbl_dias.Text = $"Duração: {dias} diária(s)";
+            lbl_hospedes.Text = $"Hóspedes: {hospedes} pessoa(s)";
+            lbl_valor.Text = total.ToString("C"); // Formata como Moeda Real (R$)
+        }
 
-    private async void Button_Clicked(object sender, EventArgs e)
-    {
-        await Navigation.PopAsync(); // Volta para a tela inicial
+        private async void Button_Clicked(object? sender, EventArgs e)
+        {
+            await Navigation.PopAsync(); // Retorna para a tela de reservas
+        }
     }
 }

@@ -5,20 +5,18 @@
              BackgroundColor="#121212">
 
     <ScrollView>
-        <VerticalStackLayout Padding="30"
-                Spacing="25">
+        <VerticalStackLayout Padding="30" Spacing="25">
 
             <Label Text="GRAND HOTEL"
                    FontSize="28"
-                    FontAttributes="Bold"
+                   FontAttributes="Bold"
                    TextColor="#D4AF37"
-                    HorizontalOptions="Center"
+                   HorizontalOptions="Center"
                    Margin="0,10"
-                    CharacterSpacing="2"/>
+                   CharacterSpacing="2"/>
 
             <VerticalStackLayout Spacing="8">
-                <Label Text="Acomodação:"
-                        TextColor="#A0A0A0"/>
+                <Label Text="Acomodação:" TextColor="#A0A0A0"/>
                 <Border BackgroundColor="#1E1E1E"
                         Padding="5"
                         Stroke="#D4AF37"
@@ -38,23 +36,14 @@
                 </Border>
             </VerticalStackLayout>
 
-            <Grid ColumnDefinitions="*,*"
-                    ColumnSpacing="20">
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="20">
                 <VerticalStackLayout Grid.Column="0">
-                    <Label Text="Check-in"
-                            TextColor="#A0A0A0"
-                            FontSize="12"/>
-                    <DatePicker x:Name="dtp_checkin"
-                            Format="dd/MM/yyyy"
-                            TextColor="White"/>
+                    <Label Text="Check-in" TextColor="#A0A0A0" FontSize="12"/>
+                    <DatePicker x:Name="dtp_checkin" Format="dd/MM/yyyy" TextColor="White"/>
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Column="1">
-                    <Label Text="Check-out"
-                            TextColor="#A0A0A0"
-                            FontSize="12"/>
-                    <DatePicker x:Name="dtp_checkout"
-                            Format="dd/MM/yyyy"
-                            TextColor="White"/>
+                    <Label Text="Check-out" TextColor="#A0A0A0" FontSize="12"/>
+                    <DatePicker x:Name="dtp_checkout" Format="dd/MM/yyyy" TextColor="White"/>
                 </VerticalStackLayout>
             </Grid>
 
@@ -62,19 +51,11 @@
                     Padding="15"
                     Stroke="#333"
                     StrokeThickness="1">
-                <HorizontalStackLayout Spacing="20"
-                        HorizontalOptions="Center">
-                    <Label Text="Hóspedes:"
-                            TextColor="White"
-                            VerticalOptions="Center"/>
-                    <Stepper x:Name="stp_adultos"
-                            Minimum="1"
-                            Maximum="10"
-                            Value="1"/>
+                <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+                    <Label Text="Hóspedes:" TextColor="White" VerticalOptions="Center"/>
+                    <Stepper x:Name="stp_adultos" Minimum="1" Maximum="10" Value="1"/>
                     <Label Text="{Binding Source={x:Reference stp_adultos}, Path=Value}"
-                           TextColor="#D4AF37"
-                            FontSize="26"
-                            FontAttributes="Bold"/>
+                           TextColor="#D4AF37" FontSize="26" FontAttributes="Bold"/>
                 </HorizontalStackLayout>
             </Border>
 
@@ -87,7 +68,7 @@
                     CornerRadius="10"/>
 
             <Button Text="Sobre o Desenvolvedor"
-                    Clicked="OnSobreClicked"
+                    Clicked="OnConfirmarClicked"
                     BackgroundColor="Transparent"
                     TextColor="#707070"
                     FontSize="12"/>
